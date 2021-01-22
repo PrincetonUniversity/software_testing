@@ -116,6 +116,15 @@ $ cd software_testing/04_pytest/circle
 $ pytest
 ```
 
+## Compatibility with unittest
+
+`pytest` can be used to run tests written using `unittest`:
+
+```
+$ cat software_testing/02_unittest/test_circle_area.py
+$ pytest software_testing/02_unittest/test_circle_area.py
+```
+
 ## Appendix: Installation
 
 `pytest` is available on PyPI and Anaconda Cloud. You may be able to install it on your personal machine with one of these commands:
