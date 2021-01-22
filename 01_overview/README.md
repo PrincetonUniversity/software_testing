@@ -1,12 +1,8 @@
 # Software Testing for Computational Researchers
 
-This workshop is designed for anyone doing computational research that writes software toward a software tool or for data analysis. It is not designed
+This workshop is for computational researchers who also write data analysis scripts, software tools or software packages. Our message in short is that you if you are writing code toward software projects or writing data analysis scripts then you should spend some time writing tests for the software you write.
 
-Don't try to become a professional software tester but if you are writing code toward software projects or writing data analysis code then you should spend some time writing tests for the software you write.
-
-In short, testing is about the actual outputs agreeing with the expected outputs.
-
-Here is a function and a few associated tests:
+Here is a simple function and a few associated tests:
 
 ```python
 def f(a, b):
@@ -18,17 +14,17 @@ assert f(1, 2 + 1j) == 3 + 1j
 assert f(['cat'], ['dog']) == ['cat', 'dog']
 ```
 
-The above should be thought of as a pseudo-code exmaple. We will demonstrate multiple testing frameworks in this workshop.
+The above should be thought of as a pseudo-code example. We will demonstrate multiple testing frameworks in the coming sections.
 
 # Reasons to write tests
 
 #### *Mistakes are easy to make*
 
-C/C++ allow for assignment in an if statement:
+C/C++ allows for assignment in an if statement:
 
 ```c++
 if (a = b) {
-  // do work
+  //  block of code to be executed if the condition is true
 }
 ```
 
@@ -43,19 +39,19 @@ a / b  # equals 0.5 in Python 3
 
 #### *Inspire confidence*
 
-By writing a test suite you will have confidence that at least all the test will run. Running the test suite is usually the first thing to do when a bug is found.
+If your test suite executes successfully then you will have more confidence in your code.
 
 #### *Promotes writing proper code*
 
-If you can't write tests for your code then the structure and design choices of the code are probably poor. An example is a lengthy routine that writes to STDOUT and returns nothing.
+If you can't write tests for your code then the structure and design choices of the code are probably poor.
 
 #### *A test suite makes debugging easier*
 
-If you have a battery of tests for a certain piece of code then when a bug arises you can run the test suite to rule out potential problems.
+If you have a battery of tests for a certain piece of code then when a bug arises you can run the test suite to rule out potential problems. Running the test suite is usually the first thing to do when a bug is found.
 
 #### *Version control is different than a test suite*
 
-While version control provides a record of all the states of the code and the changes made, it does not help with mistakes. A test suite can be used to identify mistakes introduces in the code base.
+While version control provides a record of all the states of the code and the changes made, it does not help with mistakes. A test suite can be used to identify mistakes in the codebase.
 
 # Terminology
 
