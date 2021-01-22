@@ -58,9 +58,9 @@ While version control provides a record of all the states of the code and the ch
 Test can be written to span a hierarchy of scales:
 
 * unit tests cover elementary units of code such as a simple function
-* integration tests cover collections of elementary units that have been integrated together
-* system tests cover the entire code
+* integration tests cover collections of elementary units and modules (looking for problems with how the pieces interact)
+* system tests cover the entire application
 
-## To think about
+## Questions
 
 If people can't write the main code without errors then why should they be trusted to write the test code? Should there be test code for the test code?
