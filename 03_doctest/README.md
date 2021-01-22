@@ -2,7 +2,7 @@
 
 There is a fundamentally different approach to testing using the [`doctest`](https://docs.python.org/3/library/doctest.html) module. This
 involves writing tests inside the docstrings and then executing these tests. The advantage of this approach is it combines writing
-documentaion with testing. Both of these tend to get neglected. For researchers who are trying to write some tests and some documentation
+documentation with testing. Both of these tend to get neglected. For researchers who are trying to write some tests and some documentation
 this may be the best approach for you.
 
 #### Example 1
@@ -204,7 +204,7 @@ Examples here: [https://pymotw.com/3/doctest](https://pymotw.com/3/doctest)
 
 ### Exercise
 
-Try writing tests using [`doctest`](https://docs.python.org/3/library/doctest.html) for the code below for for a piece of code you use for your research:
+Try writing tests using [`doctest`](https://docs.python.org/3/library/doctest.html) for the code below or for a script related to your research work:
 
 ```python
 import math
