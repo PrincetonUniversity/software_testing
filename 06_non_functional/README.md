@@ -32,7 +32,9 @@ for i in range(N - 1):
         if xij < x_min: x_min = xij
 ```
 
-## Python sort
+The above is O(N) in memory and O(N^2) in runtime. For more on computational complexity see this [Wikipedia page](https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations).
+
+## Python sort()
 
 What is the computational complexity of Python's built-in sort function?
 
@@ -50,4 +52,4 @@ for N in map(int, [10, 100, 1000, 10000, 100000, 1e6, 1e7, 1e8]):
 
 ![scaling](scaling.png)
 
-We see that the scaling behavior is closer to O(N) than O(N^2). According to webpages the algorithm is O(N log N).
+We see that the scaling behavior is closer to O(N) than O(N^2). According to the web the algorithm is O(N log N).
