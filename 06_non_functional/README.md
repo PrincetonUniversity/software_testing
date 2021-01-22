@@ -43,3 +43,5 @@ for N in map(int, [10, 100, 1000, 10000, 100000, 1e6, 1e7, 1e8]):
   x.sort()
   times.append((N, perf_counter() - t0))
 ```
+
+![scaling](scaling.png)
