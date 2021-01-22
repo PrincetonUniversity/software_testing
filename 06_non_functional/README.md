@@ -16,7 +16,7 @@ for i in range(N):
 ```
 
 What is the computational complexity in time and memory for this `for` loop? The answer is that the memory requirement grows linearly with N
-and so does the execution time of the code. That is, if N is double the code requires twice as much memory and twice as much runtime.
+and so does the execution time of the code. That is, if N is doubled the code requires twice as much memory and twice as much runtime.
 
 What about this example?
 
@@ -32,7 +32,7 @@ for i in range(N - 1):
         if xij < x_min: x_min = xij
 ```
 
-The above is O(N) in memory and O(N^2) in runtime. For more on computational complexity see this [Wikipedia page](https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations).
+The above is O(N) in memory and O(N^2) in runtime. This means when N is doubled the runtime increases by approximately a factor of 4. For more on computational complexity see this [Wikipedia page](https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations).
 
 ## Python sort()
 
