@@ -10,7 +10,7 @@ This workshop covers some best practices for testing code and give participants 
 
 Make sure you can run the Python script `circle_area.py` on Adroit or another machine:
 
-```
+```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_overview
