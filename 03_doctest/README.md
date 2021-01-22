@@ -7,6 +7,8 @@ this may be the best approach for you.
 
 #### Example 1
 
+The following is taken from the [`doctest`](https://docs.python.org/3/library/doctest.html) documenation:
+
 ```python
 """
 This is the "example" module.
