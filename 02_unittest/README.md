@@ -233,7 +233,7 @@ OK
 
 We see all the tests pass. Our source has been much improved.
 
-## Exercise
+## Exercise 1
 
 Create a file called `circle_radius.py` that defines a function `circle_radius` that returns the radius of a circle given the area. Then create a second file called `test_circle_radius.py` for the unittests.
 
@@ -432,7 +432,7 @@ class TestCircle(unittest.TestCase):
 By running the tests we see the order in which the various functions are executed:
 
 ```
-$ python -m unittest test_shapes.py
+$ python -m unittest misc/test_shapes_print_class.py
 setUpClass
 setUp
 test_area
