@@ -6,6 +6,18 @@ Software testing is the process of verifying and validating that code works as e
 
 This workshop covers some best practices for testing code and give participants a hands-on introduction to testing frameworks for interpreted (Python) and compiled languages (C/C++). Though the emphasis will be on unit testing, other forms of testing such as system tests, integration tests, and regression tests will be discussed.
 
+## Setup
+
+Make sure you can run the Python script `circle_area.py` on Adroit or another machine:
+
+```
+$ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
+$ git clone https://github.com/PrincetonUniversity/software_testing.git
+$ cd software_testing/01_overview
+$ module load anaconda3
+$ python circle_area.py
+```
+
 ## Attendance
 
 [Link](https://docs.google.com/spreadsheets/d/1IvaQ32-BcRHdQhDz979HX-7U7qjzRDyp/edit#gid=395939115)
