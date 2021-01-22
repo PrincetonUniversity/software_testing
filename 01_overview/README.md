@@ -16,7 +16,7 @@ assert f(['cat'], ['dog']) == ['cat', 'dog']
 
 The above should be thought of as a pseudo-code example. We will demonstrate multiple testing frameworks in the coming sections.
 
-# Reasons to write tests
+## Reasons to write tests
 
 #### *Mistakes are easy to make*
 
@@ -53,43 +53,14 @@ If you have a battery of tests for a certain piece of code then when a bug arise
 
 While version control provides a record of all the states of the code and the changes made, it does not help with mistakes. A test suite can be used to identify mistakes in the codebase.
 
-# Terminology
+## Terminology
 
-Heirarchy of Tests
+Test can be written to span a hierarchy of scales:
 
-unit - tests written for standalone units of the code (e.g., function)
+* unit tests cover elementary units of code such as a simple function
+* integration tests cover collections of elementary units that have been integrated together
+* system tests cover the entire code
 
-integration
-
-system
-
-# Practical Example
-
-The data file is composed on x, y, z coordinates:
-
-```
-$ head -n 3 mydata.csv
-2.2, 3.4, 1.9
-4.0, 0.2, 3.0
-1.1, 9.5, 5.4
-```
-
-The following code reads in a file 
-
-```python
-import pandas as pd
-
-def compute_min_distance_between_all_pairs(df):
-  return x - y
-
-if __name__ == "__main__":
-  df = pd.read_csv("myfile.dat")
-  min_dist = compute_min_distance_between_all_pairs(df):
-  print(f"The minimum distance between all pairs of points is {min_dist}")
-```
-
-
-
-How can we write code to test the correctness of `compute_min_distance_between_all_pairs`? See the next section where the Python `unittest` module is discussed.
+## To think about
 
 If people can't write the main code without errors then why should they be trusted to write the test code? Should there be test code for the test code?
