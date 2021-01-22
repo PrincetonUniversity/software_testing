@@ -17,7 +17,7 @@ The idea to unit testing is to write test code in a separate file for a given so
 
 ## Example
 
-Consider a simple implemenation of a function to compute the area of a circle (`circle_area.py`):
+Consider a function to compute the area of a circle (`software_testing/02_overview/circle_area.py`):
 
 ```python
 import math
@@ -26,7 +26,7 @@ def circle_area(radius):
   return math.pi * radius**2
 ```
 
-Let's test this script against different input values for radius (based on this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8)):
+Let's test this script against different input values for the radius:
 
 ```python
 import math
@@ -59,6 +59,8 @@ TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ```
 
 The function produces nonsensical output for the last four inputs. Note that if someone accidentally used `True` as an input the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught by the program.
+
+For a video demonstration of the above see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
 
 ## Your first unit tests
 
