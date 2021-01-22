@@ -15,11 +15,9 @@ $ python
 
 The idea to unit testing is to write test code in a separate file for a given source code unit. If the tests run successfully then you will have more confidence in the source code.
 
-Terminology: White box testing is when you write tests for code that you can see.
+## Example
 
-# Example
-
-Consider a simple implemenation of a function to compute the area of a circle (`circle_area.py)`:
+Consider a simple implemenation of a function to compute the area of a circle (`circle_area.py`):
 
 ```python
 import math
