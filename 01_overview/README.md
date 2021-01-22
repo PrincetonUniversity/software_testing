@@ -88,15 +88,7 @@ if __name__ == "__main__":
   print(f"The minimum distance between all pairs of points is {min_dist}")
 ```
 
-Make sure you can run `circle_area.py` on Adroit or another machine:
 
-```
-$ ssh <YourNetID>@adroit.princeton.edu
-$ git clone <this repo>
-$ cd software_testing/01_overview
-$ module load anaconda3
-$ python circle_area.py
-```
 
 How can we write code to test the correctness of `compute_min_distance_between_all_pairs`? See the next section where the Python `unittest` module is discussed.
 
