@@ -7,6 +7,8 @@ Everything up to this point has been functional testing where we have looked to 
 Consider the simple code below:
 
 ```python
+from random import random
+
 N = 1000
 x = [random() for _ in range(N)]
 for i in range(N):
@@ -19,6 +21,8 @@ and so does the execution time of the code. That is, if N is double the code req
 What about this example?
 
 ```python
+from random import random
+
 N = 1000
 x = [random() for _ in range(N)]
 x_min = 0.0
