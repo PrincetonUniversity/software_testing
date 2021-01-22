@@ -1,12 +1,11 @@
-# Unit Testing with unittest
+# Unit Testing
 
 Unit testing involves writing tests for standalone units of code such as a function. You could write your own testing framework maybe
 using the `assert` statement but it is better to use a framework that already exists.
 
 ## unittest from the Python Standard Library
 
-A good starting point for unit testing is the the [`unittest`](https://docs.python.org/3/library/unittest.html) module of the Python Standard Library. If you have Python installed then you have
-this module.
+A good starting point for unit testing is the [`unittest`](https://docs.python.org/3/library/unittest.html) module of the Python Standard Library. If you have Python installed then you have this module:
 
 ```bash
 $ module load anaconda3
@@ -14,9 +13,7 @@ $ python
 >>> import unittest
 ```
 
-The idea is to write code in a separate file that 
-
-Note: It is common to feel like you are making up tests that will obviously work and don't see the point in doing. In this case remind yourself that characters do getting entered into code accidentally ("sneezing" or a developer working on little sleep, someone changes the source code for debugging) so continue writing these tests with in mind. Imagination plays an important role here but don't get carried away. You can always add more tests later.
+The idea to unit testing is to write test code in a separate file for a given source code unit. If the tests run successfully then you will have more confidence in the source code.
 
 Terminology: White box testing is when you write tests for code that you can see.
 
@@ -506,3 +503,7 @@ Ran 3 tests in 0.000s
 
 OK
 ```
+
+## On writing tests
+
+When writing unit tests it is common to feel like you are creating tests that will obviously work and therefore are not worth the effort. In this case remind yourself that stray characters can get entered into code accidentally so continue writing these tests with in mind. Also, some developers debug by modifying the code and forgot to return it to its original state. In both of these cases, even simple unit tests are very likely to find the problem.
