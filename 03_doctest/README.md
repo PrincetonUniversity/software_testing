@@ -67,13 +67,13 @@ Run the code:
 
 ```
 $ software_testing/03_doctest
-$ python example.py
+$ python example1.py
 ```
 
 If there is no output then all the tests passed. To see the explicit report:
 
 ```
-$ python example.py -v
+$ python example1.py -v
 Trying:
     factorial(5)
 Expecting:
@@ -126,7 +126,7 @@ Test passed.
 It is not necessary to include the `if __name__ == "__main__"` block. That is, one can also run the tests under doctest with this command:
 
 ```
-$ python -m doctest example.py -v
+$ python -m doctest example1.py -v
 ```
 
 #### Example 2
