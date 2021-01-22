@@ -4,7 +4,17 @@
 
 ## Installation
 
-`pytest` is not part of the standard library so you will need to install it. It is available on PyPI and Anaconda Cloud via the conda-forge channel.
+`pytest` is not part of the Python standard library but it is available from the `anaconda3` module:
+
+```
+$ ssh <YourNetID>@adroit.princeton.edu
+$ module load anaconda3
+$ pytest --version
+```
+
+If you are not on Adroit then see the instructions at the bottom of this page.
+
+## Intro
 
 * pytest will run all files of the form test_*.py or *_test.py in the current directory and its subdirectories.
 * detailed info on failing assert statements (no need to remember self.assert* names)
@@ -51,4 +61,16 @@ $ cd software_testing/04_pytest/01_hello_world
 $ pytest
 $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
+```
+
+## Appendix: Installation
+
+`pytest` is available on PyPI and Anaconda Cloud. You may be able to install it on your personal machine with one of these options:
+
+```bash
+$ pip install pytest
+```
+
+```bash
+$ conda install pytest
 ```
