@@ -81,7 +81,7 @@ One can see that we wrote a class that derives from `unittest.TestCase`. We then
 
 Your test within the class must begin with `test_`. Unit tests will be ignored if they don't follow that convention, which is good if you need a helper method for one of the test functions.
 
-Note that this is an example of *white box testing* where we can inspect the code that we are writing the tests for. *Black box testing* is when tests are written when the code is not available. Test-driven development is an example of black box testing since the tests are written before the code exists.
+Note that this is an example of *white box testing* where we can inspect the code that we are writing the tests for. *Black box testing* is when tests are written when the code is not available. [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is an example of black box testing since the tests are written before the code exists.
 
 We now have two files:
 
