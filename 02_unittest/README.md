@@ -480,19 +480,9 @@ result = runner.run(suite)
 Run all the tests with:
 
 ```
-$ python runner.py
-setUpClass
-test_area (test_shapes.TestCircle) ... setUp
-test_area
-tearDown
-
-ok
-test_colors (test_shapes.TestCircle) ... setUp
-test_colors
-tearDown
-
-ok
-teardownClass
+$ python misc/runner.py
+test_area (test_shapes.TestCircle) ... ok
+test_colors (test_shapes.TestCircle) ... ok
 test_thres (test_sizes.TestThresholds) ... ok
 
 ----------------------------------------------------------------------
