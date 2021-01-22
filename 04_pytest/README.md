@@ -33,7 +33,8 @@ def test_answer():
 To run the test:
 
 ```
-$ pytest test_sample.py 
+$ cd software_testing/04_pytest
+$ pytest test_sample.py
 ===================================== test session starts =====================================
 platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
 rootdir: /scratch/gpfs/jdh4/TESTING/04_pytest
@@ -58,7 +59,6 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 To run the `test_` files in the current directory you can call `pytest` without any arguments.
 
 ```bash
-$ cd software_testing/04_pytest
 $ pytest                    # run all test files
 $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
