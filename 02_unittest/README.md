@@ -77,13 +77,11 @@ class TestCircleArea(unittest.TestCase):
         self.assertAlmostEqual(circle_area(2.1), math.pi * 2.1**2)
 ```
 
-One can see that we wrote a class that derives from `unittest.TestCase`. We then write one unit tests composed of three assert methods to check cases where the radius is greater than or equal to zero.
+One can see that we wrote a class that derives from `unittest.TestCase`. We then write one unit tests composed of three assert methods to check cases where the radius is greater than or equal to zero. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) methods.
 
 Your test within the class must begin with `test_`. Unit tests will be ignored if they don't follow that convention, which is good if you need a helper method for one of the test functions.
 
-For all the different assert methods see the documentation. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) methods.
-
-Note that this is an example of white box testing where we can inspect the code that we are writing the tests for. Black box testing is when tests are written when the code is not available. Test-driven development is an example of black box testing since the tests are written before the code is written.
+Note that this is an example of *white box testing* where we can inspect the code that we are writing the tests for. *Black box testing* is when tests are written when the code is not available. Test-driven development is an example of black box testing since the tests are written before the code exists.
 
 We now have two files:
 
@@ -103,7 +101,7 @@ Ran 1 test in 0.000s
 OK
 ```
 
-The `.` in the first line of output implies success of one test. While there are three assert methods, these are regarded as a single test.
+The `.` in the first line of output implies success of one test. While there are three assert methods, they are grouped in a single test.
 
 Add the `-v` flag for verbose output:
 
@@ -120,7 +118,7 @@ def circle_area(radius):
     return math.pi * radius**2
 ```
 
-Let's add an additional test to handle erroneous values:
+Let's add an additional test to handle radius values less than zero:
 
 ```python
 import unittest
@@ -186,7 +184,7 @@ class TestCircleArea(unittest.TestCase):
         self.assertRaises(TypeError, circle_area, "cat")
 ```
 
-Run the unittests:
+Run the unittests (without modifying the source code as an exercise):
 
 ```
 $ python -m unittest test_circle_area.py -v
