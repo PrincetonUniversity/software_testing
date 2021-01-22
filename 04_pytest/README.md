@@ -64,6 +64,56 @@ $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
 ```
 
+## Example
+
+Recall the `circle_area.py` module:
+
+```python
+import math
+
+def circle_area(radius):
+  if (radius < 0):
+      raise ValueError("The radius cannot be negative.")
+  if not type(radius) in [int, float]:
+      raise TypeError("The radius is not an int or float.")
+  return math.pi * radius**2
+```
+
+Here is how the test would appear for pytest:
+
+```python
+import pytest
+from circle_area import circle_area
+import math
+
+def test_area():
+    # test areas when radius >= 0
+    assert circle_area(1) == math.pi
+    assert circle_area(0) == 0
+    assert circle_area(2.1) == math.pi * 2.1**2
+
+def test_values():
+    # raise value error when radius is negative
+    with pytest.raises(ValueError):
+        circle_area(-2)
+
+def test_types():
+    # handle type errors
+    with pytest.raises(TypeError):
+        circle_area(3+5j)
+    with pytest.raises(TypeError):
+        circle_area(True)
+    with pytest.raises(TypeError):
+        circle_area("cat")
+```
+
+Try out the above with:
+
+```
+$ cd software_testing/04_pytest/circle
+$ pytest
+```
+
 ## Appendix: Installation
 
 `pytest` is available on PyPI and Anaconda Cloud. You may be able to install it on your personal machine with one of these commands:
