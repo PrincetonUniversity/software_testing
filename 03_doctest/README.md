@@ -195,9 +195,9 @@ doctest will not try to compare the exact traceback of the exception with the te
 
 ### More features of doctest
 
-+ You can put the tests in a text file: `$ python -m doctest -v mytests.txt`
-+ Imported modules are not searched for tests
-+ ''In most cases a copy-and-paste of an interactive console session works fine, but doctest isn’t trying to do an exact emulation of any specific Python shell.''
++ You can put the tests in a text file: `$ python -m doctest -v mytests.txt`  
++ Imported modules are not searched for tests  
++ ''In most cases a copy-and-paste of an interactive console session works fine, but doctest isn’t trying to do an exact emulation of any specific Python shell.''  
 
 ### Useful links
 
