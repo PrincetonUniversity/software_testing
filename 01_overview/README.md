@@ -55,7 +55,7 @@ While version control provides a record of all the states of the code and the ch
 
 ## Terminology
 
-Test can be written to span a hierarchy of scales:
+Test should be written to span a hierarchy of scales:
 
 * unit tests cover elementary units of code such as a simple function
 * integration tests cover collections of elementary units and modules (looking for problems with how the pieces interact)
