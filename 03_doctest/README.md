@@ -206,7 +206,7 @@ Examples here: [https://pymotw.com/3/doctest](https://pymotw.com/3/doctest)
 
 ### Exercise
 
-Try writing tests using [`doctest`](https://docs.python.org/3/library/doctest.html) for the code below or for a script related to your research work:
+Try writing tests using [`doctest`](https://docs.python.org/3/library/doctest.html) for the code below (or for a script related to your research work):
 
 ```python
 import math
