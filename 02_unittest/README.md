@@ -3,11 +3,6 @@
 Unit testing involves writing tests for standalone units of code such as a function. You could write your own testing framework maybe
 using the `assert` statement but it is better to use a framework that already exists.
 
-### Validation vs. Verification
-
-Verification involves not executing the code whereas validation does.
-
-
 ## unittest from the Python Standard Library
 
 A good starting point for unit testing is the the [`unittest`](https://docs.python.org/3/library/unittest.html) module of the Python Standard Library. If you have Python installed then you have
