@@ -6,9 +6,13 @@ Software testing is the process of veriyfing and validating that code works as e
 
 This workshop covers some best practices for testing code and give participants a hands-on introduction to testing frameworks for interpreted (Python) and compiled languages (C/C++). Though the emphasis will be on unit testing, other forms of testing such as system tests, integration tests, and regression tests will be discussed.
 
-<!--## Workshop Survey
+## Attendance
 
-Toward the end of the workshop please complete [this survey](https://forms.gle/TdiNCWpd6fJpVxYx6).-->
+[Link](https://docs.google.com/spreadsheets/d/1IvaQ32-BcRHdQhDz979HX-7U7qjzRDyp/edit#gid=395939115)
+
+## Workshop Survey
+
+Toward the end of the workshop please complete [this survey](http://bit.ly/PUBootcampWinter2021survey).
 
 ## Getting Help
 
