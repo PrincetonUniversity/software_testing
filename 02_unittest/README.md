@@ -44,7 +44,7 @@ Run the script above with these commands:
 
 ```
 $ cd software_testing/02_unittest
-$ python area.py
+$ python circle_area_values.py
 Area of circle with radius=2 is 12.566370614359172
 Area of circle with radius=0 is 0.0
 Area of circle with radius=-3 is 28.274333882308138
