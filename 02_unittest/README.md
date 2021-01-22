@@ -288,7 +288,7 @@ class TestCircle(unittest.TestCase):
         self.assertAlmostEqual(c2.compute_area(), math.pi * 5**2)
 ```
 
-The above set of tests is reasonble but we can do better by recognizing that both tests create the same Circle objects. If the initialization methods changes (maybe by adding a third required parameter) then changes must be made to both tests. The Python unittest module provides the `setUp()` and `tearDown()` methods for dealing with this.
+The above set of tests is reasonable but we can do better by recognizing that both tests create the same Circle objects. If the initialization method changes (maybe by adding a third required parameter) then changes must be made to both tests. The Python unittest module provides  `setUp()` and `tearDown()` for dealing with this.
 
 ```python
 import unittest
