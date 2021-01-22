@@ -2,7 +2,7 @@
 
 ## About
 
-Software testing is the process of veriyfing and validating that code works as expected. The most granular level is unit testing, where each standalone unit in a code (e.g., function) is exercised to help ensure that it works correctly, even in edge and corner cases. Whether you write unit tests after your code is written or as you go, software tools exist to help make the testing process less manual and more systematic.
+Software testing is the process of verifying and validating that code works as expected. The most granular level is unit testing, where each standalone unit in a code (e.g., function) is exercised to help ensure that it works correctly, even in edge and corner cases. Whether you write unit tests after your code is written or as you go, software tools exist to help make the testing process less manual and more systematic.
 
 This workshop covers some best practices for testing code and give participants a hands-on introduction to testing frameworks for interpreted (Python) and compiled languages (C/C++). Though the emphasis will be on unit testing, other forms of testing such as system tests, integration tests, and regression tests will be discussed.
 
