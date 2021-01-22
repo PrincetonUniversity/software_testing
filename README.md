@@ -16,6 +16,7 @@ $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_overview
 $ module load anaconda3
 $ python circle_area.py
+Success
 ```
 
 ## Attendance
