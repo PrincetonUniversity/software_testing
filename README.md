@@ -13,7 +13,7 @@ Make sure you can run the Python script `circle_area.py` on Adroit or another ma
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
-$ cd software_testing/02_overview
+$ cd software_testing/02_unittest
 $ module load anaconda3
 $ python circle_area.py
 Success
