@@ -197,9 +197,10 @@ doctest will not try to compare the exact traceback of the exception with the te
 + Imported modules are not searched for tests
 + ''In most cases a copy-and-paste of an interactive console session works fine, but doctest isn’t trying to do an exact emulation of any specific Python shell.''
 
-### Python 3 Module of the Week
+### Useful links
 
-Check out the examples here: [https://pymotw.com/3/doctest/](https://pymotw.com/3/doctest/)
+Python.org Documentation: [`doctest`](https://docs.python.org/3/library/doctest.html)
+Examples here: [https://pymotw.com/3/doctest/](https://pymotw.com/3/doctest/)
 
 ### Exercise
 
@@ -211,3 +212,5 @@ import math
 def circle_area(radius):
     return math.pi * radius**2
 ```
+
+Edit the file `software_testing/03_doctest/circle_area.py`.
