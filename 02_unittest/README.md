@@ -45,22 +45,20 @@ Run the script above with these commands:
 ```
 $ cd software_testing/02_unittest
 $ python circle_area_values.py
-Area of circle with radius=2 is 12.566370614359172
-Area of circle with radius=0 is 0.0
-Area of circle with radius=-3 is 28.274333882308138
-Area of circle with radius=(2+5j) is (-65.97344572538566+62.83185307179586j)
-Area of circle with radius=True is 3.141592653589793
+Area of circle with radius = 2 is 12.566370614359172
+Area of circle with radius = 0 is 0.0
+Area of circle with radius = -3 is 28.274333882308138
+Area of circle with radius = (2+5j) is (-65.97344572538566+62.83185307179586j)
+Area of circle with radius = True is 3.141592653589793
 Traceback (most recent call last):
-  File "area.py", line 8, in <module>
+  File "circle_area_values.py", line 8, in <module>
     area = circle_area(radius)
-  File "area.py", line 4, in circle_area
+  File "circle_area_values.py", line 4, in circle_area
     return math.pi * radius**2
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ```
 
-The function produces nonsensical output for the last four inputs. Note that if someone accidentally used `True` as an input the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught by the program.
-
-For a video demonstration of the above see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
+The function produces nonsensical output for the last four inputs. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught. For more see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
 
 ## Your first unit tests
 
