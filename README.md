@@ -18,7 +18,7 @@ $ module load anaconda3
 $ python circle_area.py
 Success
 ```
-
+<!--
 ## Attendance
 
 [Link](https://docs.google.com/spreadsheets/d/1IvaQ32-BcRHdQhDz979HX-7U7qjzRDyp/edit#gid=395939115)
@@ -26,6 +26,7 @@ Success
 ## Workshop Survey
 
 Toward the end of the workshop please complete [this survey](http://bit.ly/PUBootcampWinter2021survey).
+-->
 
 ## Getting Help
 
