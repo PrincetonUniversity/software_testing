@@ -65,7 +65,7 @@ $ pytest -v test_sample.py  # verbose mode
 
 ## Appendix: Installation
 
-`pytest` is available on PyPI and Anaconda Cloud. You may be able to install it on your personal machine with one of these options:
+`pytest` is available on PyPI and Anaconda Cloud. You may be able to install it on your personal machine with one of these commands:
 
 ```bash
 $ pip install pytest
