@@ -68,7 +68,7 @@ if __name__ == "__main__":
 Run the code:
 
 ```
-$ software_testing/03_doctest
+$ cd software_testing/03_doctest
 $ python example1.py
 ```
 
