@@ -58,8 +58,8 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 To run the `test_` files in the current directory you can call `pytest` without any arguments.
 
 ```bash
-$ cd software_testing/04_pytest/01_hello_world
-$ pytest
+$ cd software_testing/04_pytest
+$ pytest                    # run all test files
 $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
 ```
