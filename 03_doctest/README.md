@@ -199,8 +199,8 @@ doctest will not try to compare the exact traceback of the exception with the te
 
 ### Useful links
 
-Python.org Documentation: [`doctest`](https://docs.python.org/3/library/doctest.html)
-Examples here: [https://pymotw.com/3/doctest/](https://pymotw.com/3/doctest/)
+Python.org Documentation: [`doctest`](https://docs.python.org/3/library/doctest.html)  
+Examples here: [https://pymotw.com/3/doctest/](https://pymotw.com/3/doctest/)  
 
 ### Exercise
 
