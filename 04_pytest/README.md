@@ -16,8 +16,9 @@ If you are not on Adroit then see the instructions at the bottom of this page.
 
 ## Intro
 
-* pytest will run all files of the form test_*.py or *_test.py in the current directory and its subdirectories.
-* detailed info on failing assert statements (no need to remember self.assert* names)
+* pytest will run all files of the form `test_*.py` or `*_test.py` in the current directory and its subdirectories.
+* it uses detailed assertion introspection (so need to remember self.assert* names)
+* it is compatible with the `unittest` module
 
 ```python
 # content of test_sample.py
