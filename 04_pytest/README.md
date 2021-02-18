@@ -8,7 +8,7 @@
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu
-$ module load anaconda3
+$ module load anaconda3/2020.11
 $ pytest --version
 ```
 
