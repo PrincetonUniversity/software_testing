@@ -256,7 +256,7 @@ If you finish early then start writing unit tests for your own research software
 
 ## setUp() and tearDown()
 
-This section will illustrate the idea of `setUp()` and `tearDown()` operations. Consider the following class:
+This section will illustrate the idea of `setUp()` and `tearDown()` operations. Consider the following class (`shapes.py`):
 
 ```python
 import math
