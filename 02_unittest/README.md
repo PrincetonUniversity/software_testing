@@ -339,7 +339,8 @@ class TestCircle(unittest.TestCase):
 Now run the tests:
 
 ```
-$ python -m unittest misc/test_shapes.py -v
+$ cd 02_unittest/misc
+$ python -m unittest test_shapes.py -v
 test_area (test_shapes.TestCase1) ... ok
 test_colors (test_shapes.TestCase1) ... ok
 
