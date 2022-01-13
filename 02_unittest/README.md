@@ -225,7 +225,7 @@ We see that there is a failure. Let's modify our source code so that the tests s
 
 ```python
 def circle_area(radius):
-    if not type(radius) in [int, float]:
+    if not type(radius) in (int, float):
         raise TypeError("The radius is not an int or float.")
     if radius < 0:
         raise ValueError("The radius cannot be negative.")
