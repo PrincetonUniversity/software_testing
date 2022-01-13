@@ -31,7 +31,7 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 ## Reminders
 
 - The live workshop will be recorded
-- Please self check-in using this link: [http://cglink.me/2gi/c1340957101282848](http://cglink.me/2gi/c1340957101282848)
+- Please check-in using this link: [http://cglink.me/2gi/c1340957101282848](http://cglink.me/2gi/c1340957101282848)
 - Expect a survey from Wintersession by email after the workshop
 - [Zoom link](https://princeton.zoom.us/my/picscieworkshop2)
 
