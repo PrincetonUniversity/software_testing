@@ -63,6 +63,6 @@ Tests should be written to span a hierarchy of scales:
 * **integration tests** cover collections of elementary units and modules (looking for problems with how the pieces interact)
 * **system tests** cover the entire application
 
-## A Question
+## Questions
 
 If people are unable to write the main code without errors then why should they be trusted to write the test code? Should there be test code for the test code?
