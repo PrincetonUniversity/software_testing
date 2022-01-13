@@ -25,7 +25,6 @@ If you are not on Adroit then see the instructions at the bottom of [this page](
 def func(x):
     return x + 1
 
-
 def test_answer():
     assert func(3) == 5
 ```
