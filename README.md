@@ -34,6 +34,7 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 - Please check-in using this link: [http://cglink.me/2gi/c1340957101282848](http://cglink.me/2gi/c1340957101282848)
 - Expect a survey from Wintersession by email after the workshop
 - [Zoom link](https://princeton.zoom.us/my/picscieworkshop2)
+- Request an account on [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
 
 ## Getting Help
 
