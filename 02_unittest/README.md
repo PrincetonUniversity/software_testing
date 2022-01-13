@@ -58,7 +58,7 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ```
 
-The function produces nonsensical output for the last four inputs. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught. For more see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
+The function produces nonsensical output for three of the inputs and crashes when encountering a string. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught. For more see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
 
 ## Your first unit tests
 
