@@ -62,7 +62,19 @@ The function produces nonsensical output for three of the inputs and crashes whe
 
 ## First unit test
 
-The test is stored in a separate file (see `test_circle_area.py`). It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
+Consider the code below (see `circle_area.py`):
+
+```python
+import math
+
+def circle_area(radius):
+    return math.pi * radius**2
+  
+if __name__ == "__main__":
+    print("Success")
+```
+
+Let's look at a unit test for the `circle_area` function. The test is stored in a separate file (see `test_circle_area.py`). It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
 
 ```python
 import unittest
