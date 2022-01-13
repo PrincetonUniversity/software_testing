@@ -12,7 +12,7 @@ $ module load anaconda3/2021.5
 $ pytest --version
 ```
 
-If you are not on Adroit then see the instructions at the bottom of [this page](https://docs.pytest.org/en/stable/).
+If you are not on Adroit then see the instructions at the bottom of [this page](https://docs.pytest.org/en/stable/getting-started.html).
 
 ## Intro
 
