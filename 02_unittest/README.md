@@ -199,7 +199,7 @@ class TestCircleArea(unittest.TestCase):
         self.assertRaises(TypeError, circle_area, "cat")
 ```
 
-Run the unittests (without modifying the source code as an exercise):
+Run the unit tests (without modifying the source code as an exercise):
 
 ```
 $ python -m unittest test_circle_area.py -v
@@ -246,7 +246,7 @@ Ran 3 tests in 0.000s
 OK
 ```
 
-We see all the tests pass. Our source has been much improved.
+We see all the tests pass. Our source code has been much improved.
 
 ## Exercise 1
 
