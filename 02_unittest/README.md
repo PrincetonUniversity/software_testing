@@ -17,7 +17,7 @@ The idea to unit testing is to write test code in a separate file for a given so
 
 ## Example
 
-Consider a function to compute the area of a circle (`software_testing/02_unittest/circle_area_values.py`):
+Consider a function to compute the area of a circle:
 
 ```python
 import math
@@ -26,7 +26,7 @@ def circle_area(radius):
   return math.pi * radius**2
 ```
 
-Let's test this script against different input values for the radius:
+Let's test this script against different input values for the radius (`software_testing/02_unittest/circle_area_values.py`):
 
 ```python
 import math
