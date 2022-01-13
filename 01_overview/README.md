@@ -1,6 +1,6 @@
 # Software Testing for Computational Researchers
 
-This workshop is for computational researchers who write data analysis scripts, software tools or software packages. Our message in short is that you if you are writing code toward software projects or writing data analysis scripts then you should spend some time writing tests for the software you write.
+This workshop is for computational researchers who write data analysis scripts, software tools or software packages. Our message, in short, is that if you are writing code toward software projects or writing data analysis scripts then you should spend some time writing tests for the software.
 
 Here is a simple function and a few associated tests:
 
