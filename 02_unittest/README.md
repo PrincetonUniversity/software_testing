@@ -388,7 +388,7 @@ class TestCircle(unittest.TestCase):
 Here is the output:
 
 ```
-$ python -m unittest misc/test_shapes_print.py
+$ python -m unittest test_shapes_print.py
 setUp
 test_area
 tearDown
@@ -449,7 +449,7 @@ class TestCircle(unittest.TestCase):
 By running the tests we see the order in which the various functions are executed:
 
 ```
-$ python -m unittest misc/test_shapes_print_class.py
+$ python -m unittest test_shapes_print_class.py
 setUpClass
 setUp
 test_area
@@ -497,7 +497,7 @@ result = runner.run(suite)
 Run all the tests with:
 
 ```
-$ python misc/runner.py
+$ python runner.py
 test_area (test_shapes.TestCircle) ... ok
 test_colors (test_shapes.TestCircle) ... ok
 test_thres (test_sizes.TestThresholds) ... ok
