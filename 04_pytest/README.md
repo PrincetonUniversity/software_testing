@@ -4,15 +4,15 @@
 
 ## Installation
 
-`pytest` is not part of the Python standard library but it is available from the `anaconda3` module:
+`pytest` is not part of the Python standard library but it is available from the `anaconda3` modules:
 
-```
+```bash
 $ ssh <YourNetID>@adroit.princeton.edu
-$ module load anaconda3/2020.11
+$ module load anaconda3/2021.5
 $ pytest --version
 ```
 
-If you are not on Adroit then see the instructions at the bottom of this page.
+If you are not on Adroit then see the instructions at the bottom of [this page](https://docs.pytest.org/en/stable/).
 
 ## Intro
 
