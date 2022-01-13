@@ -469,7 +469,7 @@ In the above nothing was done in `setUpClass()` or `tearDownClass()`. An example
 
 ## Exercise 2
 
-Add `setUp()`, `tearDown()`, `setUpClass()` and `tearDownClass()` to the tests of `circle_radius.py`. Or apply these methods to the tests of the scripts for your research work.
+Add `setUp()`, `tearDown()`, `setUpClass()` and `tearDownClass()` to the tests of `test_bmi.py`. Or apply these methods to the tests of the scripts for your research work.
 
 ## Running multiple test files with TestSuite
 
