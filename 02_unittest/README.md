@@ -60,9 +60,9 @@ TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 
 The function produces nonsensical output for three of the inputs and crashes when encountering a string. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught. For more see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
 
-## Your first unit tests
+## First unit test
 
-The tests will be stored in a separate file. Create the file for the unit tests with the filename `test_circle_area.py`. It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
+The test is stored in a separate file (see `test_circle_area.py`). It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
 
 ```python
 import unittest
@@ -77,9 +77,9 @@ class TestCircleArea(unittest.TestCase):
         self.assertAlmostEqual(circle_area(2.1), math.pi * 2.1**2)
 ```
 
-One can see that we wrote a class that derives from `unittest.TestCase`. We then write one unit test composed of three assert methods to check cases where the radius is greater than or equal to zero. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) methods.
+One can see that we wrote a class that derives from `unittest.TestCase`. We then write a class method for a unit test composed of three assert methods to check cases where the radius is greater than or equal to zero. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) assert methods.
 
-Your test within the class must begin with `test_`. Unit tests will be ignored if they don't follow that convention, which is good if you need a helper method for one of the test functions.
+The name of the test within the class must begin with `test_`. Unit tests will be ignored if they don't follow that convention, which is useful if you need a helper method for one of the test functions.
 
 Note that this is an example of *white box testing* where we can inspect the code that we are writing the tests for. *Black box testing* is when tests are written when the code is not available. [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is an example of black box testing since the tests are written before the code exists.
 
