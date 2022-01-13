@@ -508,4 +508,4 @@ OK
 
 ## On writing tests
 
-When writing unit tests it is common to feel like you are creating tests that will obviously work and therefore are not worth the effort. In this case, remind yourself that a lot of things can go wrong when writing software. For instance, stray characters can get entered into code accidentally (e.g., a literal sneeze) so continue writing these tests with this in mind. Also, some developers debug by modifying the code and forgot to return it to its original state. In both of these cases, even simple unit tests are very likely to find the problem.
+When writing unit tests it is common to feel like you are creating tests that will obviously work and therefore are not worth the effort. In this case, remind yourself that a lot of things can go wrong when writing software. For instance, stray characters can get entered into code accidentally (e.g., a literal sneeze) so continue writing these tests with this in mind. Also, some developers debug by modifying the code and forget to return it to its original state. In both of these cases, even simple unit tests are very likely to find the problem.
