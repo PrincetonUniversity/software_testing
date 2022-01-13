@@ -130,6 +130,8 @@ def circle_area(radius):
     return math.pi * radius**2
 ```
 
+See a list of [built-in Python exceptions](https://docs.python.org/3/library/exceptions.html) which includes `ValueError`.
+
 Let's add an additional test to handle radius values less than zero:
 
 ```python
