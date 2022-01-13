@@ -250,9 +250,9 @@ We see all the tests pass. Our source code has been much improved.
 
 ## Exercise 1
 
-Create a file called `circle_radius.py` that defines a function `circle_radius` that returns the radius of a circle given the area. Then create a second file called `test_circle_radius.py` for the unittests.
+Create a file called `bmi.py` that provides a function to compute the body mass index which is `bmi = mass / height**2`. Then create a second file called `test_bmi.py` for the unit tests. In addition to previous tests, be sure to include a check for division by zero (`ZeroDivisionError`) and a unit test where `mass` or `height` is `None`.
 
-If you finish early then start writing unit tests for the scripts for your research work or look at the [`unittest`](https://docs.python.org/3/library/unittest.html) documentation.
+If you finish early then start writing unit tests for your own research software or look at the [`unittest`](https://docs.python.org/3/library/unittest.html) documentation.
 
 ## setUp() and tearDown()
 
