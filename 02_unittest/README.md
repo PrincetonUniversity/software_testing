@@ -268,6 +268,7 @@ class Circle:
         self.color = color
 
     def compute_area(self):
+        # tests removed for brevity
         return math.pi * self.radius**2
 
     def change_color(self, new_color):
