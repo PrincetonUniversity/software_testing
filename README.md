@@ -33,6 +33,7 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 - The live workshop will be recorded
 - Use the [QR code](http://cglink.me/2gi/c1340957101282848) to mark your attendance
 - Expect a survey from Wintersession by email after the workshop
+- [Zoom link](https://princeton.zoom.us/my/picscieworkshop2)
 
 ## Getting Help
 
