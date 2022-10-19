@@ -1,6 +1,6 @@
 # Unit Testing
 
-Unit testing involves writing tests for standalone units of code such as a function. You could write your own testing framework maybe
+Unit testing involves writing tests for standalone units of code such as a function or module. You could write your own testing framework maybe
 using the `assert` statement but it is better to use a framework that already exists.
 
 ## unittest from the Python Standard Library
@@ -339,7 +339,7 @@ class TestCircle(unittest.TestCase):
 Now run the tests:
 
 ```
-$ cd 02_unittest/misc
+$ cd 02_unittest/examples
 $ python -m unittest test_shapes.py -v
 test_area (test_shapes.TestCase1) ... ok
 test_colors (test_shapes.TestCase1) ... ok
@@ -471,7 +471,14 @@ In the above nothing was done in `setUpClass()` or `tearDownClass()`. An example
 
 ## Exercise 2
 
-Develop the `setUp()`, `tearDown()`, `setUpClass()` and `tearDownClass()` methods for `misc/health.py` and `misc/test_health.py`. Or apply these methods to the tests of the scripts for your research work.
+Develop the `setUp()`, `tearDown()`, `setUpClass()` and `tearDownClass()` methods for `examples/health.py` and `examples/test_health.py`. Or apply these methods to the tests of the scripts for your research work.
+
+## Exercise 3
+Write a unit test for the two functions in the file `examples/std_dev.py`. 
+
+Question: Did you create negative tests? Did you find any bugs in the code or the comments?
+Is there anyway you could improve or simplify the code?
+Make sure you re-run the tests if you change the code.
 
 ## Running multiple test files with TestSuite
 

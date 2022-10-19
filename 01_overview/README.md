@@ -59,9 +59,10 @@ While version control provides a record of all the states of the code and the ch
 
 Tests should be written to span a hierarchy of scales:
 
-* **unit tests** cover elementary units of code such as a simple function
-* **integration tests** cover collections of elementary units and modules (looking for problems with how the pieces interact)
-* **system tests** cover the entire application
+* **unit tests** cover single units of code such as a single function or module.
+* **integration tests** cover collections of units and modules (looking for problems with how the pieces interact).
+* **system tests** cover the entire application.
+* **regression tests** Are automated suites of tests that can be run repeatably to check for new errors introduced by new changes (often are unit tests).
 
 ## Questions
 
