@@ -28,3 +28,6 @@ class TestCircle(unittest.TestCase):
     def tearDown(self):
         # do teardown operations here for each test
         print("tearDown")
+
+if __name__ == "__main__":
+    unittest.main()

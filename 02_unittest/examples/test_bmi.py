@@ -23,3 +23,6 @@ class TestBMI(unittest.TestCase):
     def test_zero(self):
         # division by zero
         self.assertRaises(ZeroDivisionError, bmi, 1, 0)
+
+if __name__ == "__main__":
+    unittest.main()
