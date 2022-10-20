@@ -24,5 +24,12 @@ class TestBMI(unittest.TestCase):
         # division by zero
         self.assertRaises(ZeroDivisionError, bmi, 1, 0)
 
+    def test_mass_illegal_type(self):
+        try:
+            bmi(1, "cat")
+            raise AssertionError("Expected Type Error for mass")
+        except Exception as e:
+            self.assertEqual(type(e), TypeError)        
+
 if __name__ == "__main__":
     unittest.main()
