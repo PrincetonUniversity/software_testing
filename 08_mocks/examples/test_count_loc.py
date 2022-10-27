@@ -1,5 +1,6 @@
 """Unit test to test count_loc"""
 
+import os
 import unittest
 import count_loc
 
@@ -8,7 +9,7 @@ class TestCountLoc(unittest.TestCase):
     
     """Test happy path"""
     def test_happy_path(self):
-        count_loc.GPFS_DIRECTORY = "../mock_data"
+        count_loc.GPFS_DIRECTORY = os.path.join(os.path.dirname(__file__), "..", "mock_data")
         num_lines = count_loc.count_loc()
         self.assertEqual(4, num_lines)
 
