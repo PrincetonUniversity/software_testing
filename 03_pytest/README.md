@@ -61,11 +61,12 @@ To run the `test_` files in the current directory you can call `pytest` without 
 $ pytest                    # run all test files
 $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
+$ pytest -s test_sample.py  # print statements in code/tests are written to console
 ```
 
 ## Example
 
-Recall the `circle_area.py` module:
+Recall the `circle_area.py` function:
 
 ```python
 import math
@@ -82,37 +83,35 @@ Here is how the test would appear for pytest:
 
 ```python
 import pytest
-from circle_area import circle_area
 import math
+from circle_area import circle_area
 
-class TestClass:
+def test_area():
+    # test areas when radius >= 0
+    assert circle_area(1) == math.pi
+    assert circle_area(0) == 0
+    assert circle_area(2.1) == math.pi * 2.1**2
 
-    def test_area(self):
-        # test areas when radius >= 0
-        assert circle_area(1) == math.pi
-        assert circle_area(0) == 0
-        assert circle_area(2.1) == math.pi * 2.1**2
+def test_values():
+    # raise value error when radius is negative
+    with pytest.raises(ValueError):
+        circle_area(-2)
 
-    def test_values(self):
-        # raise value error when radius is negative
-        with pytest.raises(ValueError):
-            circle_area(-2)
-
-    def test_types(self):
-        # handle type errors
-        with pytest.raises(TypeError):
-            circle_area(3+5j)
-        with pytest.raises(TypeError):
-            circle_area(True)
-        with pytest.raises(TypeError):
-            circle_area("cat")
+def test_types():
+    # handle type errors
+    with pytest.raises(TypeError):
+        circle_area(3+5j)
+    with pytest.raises(TypeError):
+        circle_area(True)
+    with pytest.raises(TypeError):
+        circle_area("cat")
 ```
 
 Try out the above with:
 
 ```
-$ cd software_testing/04_pytest/circle
-$ pytest
+$ cd software_testing/03_pytest/examples
+$ pytest test_geometric_area.py
 ```
 
 ## Compatibility with unittest

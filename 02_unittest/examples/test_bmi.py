@@ -23,3 +23,12 @@ class TestBMI(unittest.TestCase):
     def test_zero(self):
         # division by zero
         self.assertRaises(ZeroDivisionError, bmi, 1, 0)
+
+    def test_illegal_type(self):
+        with self.assertRaises(TypeError):
+            bmi(1, "cat")
+        with self.assertRaises(TypeError):
+            bmi("cat", 1)
+
+if __name__ == "__main__":
+    unittest.main()

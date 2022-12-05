@@ -6,10 +6,12 @@ class TestCircle(unittest.TestCase):
 
     def setUp(self):
         # do setup operations here for each test
+        print("setUp")
         self.c1 = Circle(3, "red")
         self.c2 = Circle(5, "green")
-        
+      
     def test_colors(self):
+        print("test_colors")
         self.assertEqual(self.c1.color, "red")
         self.assertEqual(self.c2.color, "green")
 
@@ -19,9 +21,13 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(self.c2.color, "blue")
 
     def test_area(self):
+        print("test_area")
         self.assertAlmostEqual(self.c1.compute_area(), math.pi * 3**2)
         self.assertAlmostEqual(self.c2.compute_area(), math.pi * 5**2)
 
     def tearDown(self):
         # do teardown operations here for each test
-        pass
+        print("tearDown")
+
+if __name__ == "__main__":
+    unittest.main()

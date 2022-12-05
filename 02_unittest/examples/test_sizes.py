@@ -12,3 +12,6 @@ class TestThresholds(unittest.TestCase):
         self.assertTrue(self.b.check())
         self.assertTrue(self.m.check())
         self.assertFalse(self.s.check())
+
+if __name__ == "__main__":
+    unittest.main()
