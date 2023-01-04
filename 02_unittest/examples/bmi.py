@@ -11,5 +11,3 @@ def bmi(mass, height):
         raise ZeroDivisionError("The height cannot be zero.")   
     return mass / height**2
   
-if __name__ == "__main__":
-    print("Success")

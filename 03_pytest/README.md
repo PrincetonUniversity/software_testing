@@ -1,127 +1,163 @@
 # pytest
 
-[pytest](https://docs.pytest.org/en/stable/) is a framework that makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.
+The [pytest](https://docs.pytest.org/en/stable/) package is an alternative to unittest. You create tests with functions instead of classes and you typically just use standard python assert methods. 
 
-## Installation
+You use the pytest command line tool to execute tests. The pytest command line tools can be used to execute tests created with either unittest or pytest so you can write unit tests with either test framework.
 
-`pytest` is not part of the Python standard library but it is available from the `anaconda3` modules:
+The pytest package is not part of the standard python library so it needs to be installed with PIP or loaded with a module on adroit. See the appendix at end of this file.
 
-```bash
-$ ssh <YourNetID>@adroit.princeton.edu
-$ module load anaconda3/2021.5
-$ pytest --version
+
+## Example Test with PyTest
+
+Assume a source code file (`func.py`).
+
 ```
-
-If you are not on Adroit then see the instructions [below](https://github.com/PrincetonUniversity/software_testing/tree/main/04_pytest#appendix-installation) or the [pytest webpage](https://docs.pytest.org/en/stable/getting-started.html).
-
-## Intro
-
-* pytest will run all files of the form `test_*.py` or `*_test.py` in the current directory and its subdirectories.
-* it uses detailed assertion introspection (so need to remember self.assert* names)
-* it is compatible with the `unittest` module
-
-```python
-# content of test_sample.py
 def func(x):
-    return x + 1
-
-def test_answer():
-    assert func(3) == 5
+	return x + 1
 ```
 
-To run the test:
+Then a test case for that file in pytest could be (`test_func.py`).
 
 ```
-$ cd software_testing/04_pytest
-$ pytest test_sample.py
-===================================== test session starts =====================================
-platform linux -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
-rootdir: /scratch/gpfs/jdh4/TESTING/04_pytest
-collected 1 item                                                                              
+from func import func
 
-test_sample.py F                                                                        [100%]
+def test_func():
+	assert func(3) == 4
+```
+This does the same thing as a unit test written with the unittest package, but it is less code without classes.
 
-========================================== FAILURES ===========================================
-_________________________________________ test_answer _________________________________________
+## Running PyTest Unit Test
+You can execute the unit test using pytest.
 
-    def test_answer():
->       assert func(3) == 5
-E       assert 4 == 5
-E        +  where 4 = func(3)
+```
+pytest test_func.py
 
-test_sample.py:7: AssertionError
-=================================== short test summary info ===================================
-FAILED test_sample.py::test_answer - assert 4 == 5
-====================================== 1 failed in 0.10s ======================================
+collected 1 item
+test_func.py .                      [100%]
 ```
 
-To run the `test_` files in the current directory you can call `pytest` without any arguments.
+
+To run the `test_` files in the current directory you can call `pytest` without any arguments. This will run all tests in the current directory and all sub-directires so you can execute a full test suite.
+
+The following arguments to pytest are useful.
 
 ```bash
 $ pytest                    # run all test files
 $ pytest -q test_sample.py  # quiet mode
 $ pytest -v test_sample.py  # verbose mode
-$ pytest -s test_sample.py  # print statements in code/tests are written to console
+$ pytest -s test_sample.py  # show print messages in code or tests
 ```
 
-## Example
+Without the -s option print statements in your code do nothing. Use -s to see print statements.
 
-Recall the `circle_area.py` function:
+If you add these lines to the test case file:
 
-```python
-import math
-
-def circle_area(radius):
-  if not type(radius) in [int, float]:
-      raise TypeError("The radius is not an int or float.")
-  if (radius < 0):
-      raise ValueError("The radius cannot be negative.")
-  return math.pi * radius**2
+```
+if __name__ == "__main__":
+	import pytest
+	pytest.main([__file__])
 ```
 
-Here is how the test would appear for pytest:
+Then you can also execute the test with:
+
+```python test_func2.py```
+
+## Test Fixtures
+
+Unit tests often need to set up and tear down the test environment between each test. In the unittest package this is done with setUp() and tearDown() methods. With pytest this is done with fixtures.
+
+A test fixture is defined by a function with a @pytest.fixture() annotation. A single function contains both the set up and tear down code seperated by a yield statement. 
+
 
 ```python
 import pytest
-import math
-from circle_area import circle_area
+from func import func
 
-def test_area():
-    # test areas when radius >= 0
-    assert circle_area(1) == math.pi
-    assert circle_area(0) == 0
-    assert circle_area(2.1) == math.pi * 2.1**2
+@pytest.fixture(autuse=True)
+def setUp():
+	print()
+	print("setUp")
+	yield
+	print("tearDown")
 
-def test_values():
-    # raise value error when radius is negative
-    with pytest.raises(ValueError):
-        circle_area(-2)
-
-def test_types():
-    # handle type errors
-    with pytest.raises(TypeError):
-        circle_area(3+5j)
-    with pytest.raises(TypeError):
-        circle_area(True)
-    with pytest.raises(TypeError):
-        circle_area("cat")
+def test_answer():
+    print("Run Test")
+    assert func(3) == 4
 ```
 
-Try out the above with:
+You may have multiple fixtures in the same test file.
+
+Run the example above with the -s option to see the print statement messages
+
+```bash
+pytest -s test_with_fixture.py
+test_with_fixture.py 
+setUp
+Run Test
+.tearDown
+```
+
+See the examples folder for exercise files.
+
+## Exercise 1
+
+Consider a function that finds people based on zipcode by looking in a large demographics file in our project GPFS file system. The function is in (`find_people.py`).
+
+```python
+import csv
+
+"""Folder in our large project GPFS file system"""
+GPFS_FOLDER = "/myproject_data"
+
+def find_people(search_zip_code):
+    """Find people that live in a specific zip code and return their demographic information"""
+
+    result = []
+    demographics_csv = f"{GPFS_FOLDER}/private_info/demographics.csv"
+    with open(demographics_csv) as csv_file:
+        csv_reader = csv.reader(csv_file)
+        for row in csv_reader:
+            zip_code = row[3]
+            if zip_code == search_zip_code:
+                result.append(row)
+    return result
+```
+
+We could write a unit test that calls `find_people` with a zipcode and checks the number of people returned. However, this test case would only work if we run it on our project machine that contain the /myproject_data GPFS. Also, the GPFS data changes often so our test case may pass today, but then fail tomorrow because the data changes.
+
+There are many ways to address this issue, but one way is to have the test case generate test data and simulate the contents of the GPFS. Fixtures are a good way to set up and tear down this test data.
+
+Consider the following test written in pytest (`test_find_people.py`).
+
+```python
+import pytest
+import find_people
+import mock_data
+
+@pytest.fixture(autouse=True)
+def setUp():
+    mock_dir = mock_data.generate_test_data()
+    find_people.GPFS_FOLDER = mock_dir
+    yield
+    mock_data.delete_temp_directory(mock_dir)
+
+def test_legal_zipcode():
+    people = find_people.find_people("10036")
+    assert len(people) == 1
+
+def test_multiple_results():
+    people = find_people.find_people("10019")
+    assert len(people) == 2
+
+def test_no_results():
+    people = find_people.find_people("00000")
+    assert len(people) == 0
 
 ```
-$ cd software_testing/03_pytest/examples
-$ pytest test_geometric_area.py
-```
 
-## Compatibility with unittest
+This test case calls a function in our test directory to mock up the test data and then replace the contents of the `find_people.GPFS_FOLDER` variable before finding people. After the test it deletes our test data to clean up.
 
-`pytest` can be used to run tests written using `unittest`:
-
-```
-$ cat software_testing/02_unittest/test_circle_area.py
-$ pytest software_testing/02_unittest/test_circle_area.py
-```
+This test run fast because the test data is small and we can control the test data and simulate any test scenario we want.
 
 ## Appendix: Installation
 
@@ -134,3 +170,8 @@ $ pip install pytest
 ```bash
 $ conda install pytest
 ```
+
+```bash
+$ ssh <YourNetID>@adroit.princeton.edu
+$ module load anaconda3/2021.5
+$ pytest --vesion

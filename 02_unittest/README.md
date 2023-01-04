@@ -3,7 +3,7 @@
 Unit testing involves writing tests for standalone units of code such as a function or module. You could write your own testing framework maybe
 using the `assert` statement but it is better to use a framework that already exists.
 
-## unittest from the Python Standard Library
+## Package unittest from the Python Standard Library
 
 A good starting point for unit testing is the [`unittest`](https://docs.python.org/3/library/unittest.html) module of the Python Standard Library. If you have Python installed then you have this module:
 
@@ -13,7 +13,7 @@ $ python
 >>> import unittest
 ```
 
-The idea to unit testing is to write test code in a separate file for a given source code unit. If the tests run successfully then you will have more confidence in the source code.
+It is a good idea to write unit test code in a separate file for a given source code unit. If the tests run successfully then you will have more confidence in the source code.
 
 ## Example
 
@@ -26,7 +26,9 @@ def circle_area(radius):
   return math.pi * radius**2
 ```
 
-Let's test this script against different input values for the radius (`software_testing/02_unittest/circle_area_values.py`):
+Let's test this script against different input values for the radius (`software_testing/02_unittest/circle_area.py`):
+
+You may also like to watch this entertaining [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8) using this example.
 
 ```python
 import math
@@ -58,23 +60,12 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 ```
 
-The function produces nonsensical output for three of the inputs and crashes when encountering a string. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? Let's also write a series of tests to make sure the mistakes highlighted in the example above are caught. For more see this Socratica [video](https://www.youtube.com/watch?v=1Lfv5tUGsn8).
+The function produces nonsensical output for three of the inputs and crashes when encountering a string. Note that if a user accidentally used `True` as an input, the code would not fail. Can we improve on our function to make it more robust? We could also write tests to make sure the mistakes highlighted in the example above are caught.
 
 ## First unit test
 
-Consider the code below (see `circle_area.py`):
 
-```python
-import math
-
-def circle_area(radius):
-    return math.pi * radius**2
-  
-if __name__ == "__main__":
-    print("Success")
-```
-
-Let's look at a unit test for the `circle_area` function. The test is stored in a separate file (see `test_circle_area.py`). It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
+Let's create at a unit test for the `circle_area` function. The test is stored in a separate file (see `test_circle_area.py`). It is conventional to prepend `test_` to the name of the original source file. Here are the contents of `test_circle_area.py`:
 
 ```python
 import unittest
@@ -89,11 +80,13 @@ class TestCircleArea(unittest.TestCase):
         self.assertAlmostEqual(circle_area(2.1), math.pi * 2.1**2)
 ```
 
-One can see that we wrote a class that derives from `unittest.TestCase`. We then write a class method for a unit test composed of three assert methods to check cases where the radius is greater than or equal to zero. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) assert methods.
+You can see to use the unittest package we wrote a class that derives from `unittest.TestCase`. We then write a class method for a unit test composed of three assert methods to check cases where the radius is greater than or equal to zero. Here are the [most popular](https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug) assert methods.
 
-The name of the test within the class must begin with `test_`. Unit tests will be ignored if they don't follow that convention, which is useful if you need a helper method for one of the test functions.
+The name of the test within the class must begin with `test_`. Methods that do not start with `test_` are not tests, which is useful if you need a helper method to support your test functions.
 
-Note that this is an example of *white box testing* where we can inspect the code that we are writing the tests for. *Black box testing* is when tests are written when the code is not available. [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is an example of black box testing since the tests are written before the code exists.
+Note, in our example we are writing the tests after writing the code implementation. There is also a methodology called 
+[Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) that suggests you write the tests before the implementation of the code is written. In either case, after you are done you have both code and tests.
+
 
 We now have two files:
 
@@ -121,7 +114,8 @@ Add the `-v` flag for verbose output:
 $ python -m unittest test_circle_area.py -v
 ```
 
-Return to the source code (`circle_area.py`) and handle the case of a negative area:
+The directory also contains another test file (`test_circle_area2.py`) that add additional tests to check for value and type errors. As an excercise modify circle_area.py to pass `test_circle_area2.py`.
+
 
 ```python
 def circle_area(radius):
@@ -254,9 +248,10 @@ Create a file called `bmi.py` that provides a function to compute the body mass 
 
 If you finish early then start writing unit tests for your own research software or look at the [`unittest`](https://docs.python.org/3/library/unittest.html) documentation.
 
-## setUp() and tearDown()
+## Excercise 2
 
-This section will illustrate the idea of `setUp()` and `tearDown()` operations. Consider the following class (`shapes.py`):
+
+This section will illustrate the idea of setting up and tearing down the environment for a test. The `setUp()` and `tearDown()` methods of unittest support this. Consider the following class (`shapes.py`):
 
 ```python
 import math
@@ -304,7 +299,9 @@ class TestCircle(unittest.TestCase):
         self.assertAlmostEqual(c2.compute_area(), math.pi * 5**2)
 ```
 
-The above set of tests is reasonable but we can do better by recognizing that both tests create the same Circle objects. If the initialization method changes (maybe by adding a third required parameter) then changes must be made to both tests. The Python unittest module provides  `setUp()` and `tearDown()` for dealing with this.
+## setUp() and tearDown()
+
+The above set of tests is reasonable but we can do better by recognizing that the setup for all the tests are the same. They all create the same Circle objects. The Python unittest module provides methods  `setUp()` and `tearDown()` to implement common setup and tear down of a test environment. These methods run before and after each test.
 
 ```python
 import unittest
@@ -469,11 +466,11 @@ OK
 
 In the above nothing was done in `setUpClass()` or `tearDownClass()`. An example of using `setUpClass()` would be connecting to a database or generating a large file. For more details on the material above see the [video](https://www.youtube.com/watch?v=6tNS--WetLI) by Corey Schafer.
 
-## Exercise 2
+## Exercise 3
 
 Develop the `setUp()`, `tearDown()`, `setUpClass()` and `tearDownClass()` methods for `examples/health.py` and `examples/test_health.py`. Or apply these methods to the tests of the scripts for your research work.
 
-## Exercise 3
+## Exercise 4
 Write a unit test for the two functions in the file `examples/std_dev.py`. 
 
 Question: Did you create negative tests? Did you find any bugs in the code or the comments?
@@ -517,4 +514,9 @@ OK
 
 ## On writing tests
 
-When writing unit tests it is common to feel like you are creating tests that will obviously work and therefore are not worth the effort. In this case, remind yourself that a lot of things can go wrong when writing software. For instance, stray characters can get entered into code accidentally (e.g., a literal sneeze) so continue writing these tests with this in mind. Also, some developers debug by modifying the code and forget to return it to its original state. In both of these cases, even simple unit tests are very likely to find the problem.
+
+When writing unit tests it is common to feel like you are creating tests that will obviously work. It is hard to know which scenarios to test. It is impossible to write tests to handle ALL scenarios. When writing tests think about your audience. Write tests to help the next person who might have to use or change your code. This might be your future self 2 weeks from now.
+
+It may be helpful to start with just one test case per file. It is not hard to write one test. As you debug if you find a problem then add a new test case for that bug. It is easy to add one more test if the test file already exists.
+
+Over time you will find your tests will grow to be quite comprehensive and useful.

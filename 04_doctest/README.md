@@ -1,9 +1,12 @@
 # doctest
 
-There is a fundamentally different approach to testing in Python using the [`doctest`](https://docs.python.org/3/library/doctest.html) module. This
-involves writing tests inside the docstrings and then executing these tests. The advantage of this approach is it combines writing
-documentation with testing. Both of these tend to get neglected. For researchers who are trying to write "some" tests and "some" documentation
-this may be the best approach for you.
+The [`doctest`](https://docs.python.org/3/library/doctest.html) module is a very different way of testing compared with unittest and pytest. 
+
+This
+involves writing tests inside the docstrings of functions. The advantage of this approach is it combines writing
+documentation with testing. 
+
+It is helpful to be aware of this option for writing tests.
 
 #### Example 1
 
