@@ -69,6 +69,6 @@ Your code can be tested with different types of tests:
 * Does writng test cases slow down development?
 * Should there be test code for test code?
 * What does it mean when a test fails?
-* Can tests improve you code design?
+* Can tests improve your code design?
 * What can it mean to setup up the environment for a test?
 * What can it mean when it is difficult to write tests?

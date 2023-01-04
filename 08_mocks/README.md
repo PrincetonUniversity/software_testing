@@ -25,23 +25,23 @@ This can be useful to:
         
 ## Test For Example 1
 
-We want to write a test for myfunc. However, we just want to test our code and not the URL server that it is calling. We will write the test and mock out the API call.
+We want to write a test for myfunc. However, we just want to test our code and not the URL server that it is calling. We will write the test and mock out the API call (`test_my_func.py`).
 
+```python
+import unittest
+from unittest import mock
+from my_func import myfunc
+	
+class MockResponse:
+    def __init__(self, value):
+        self.text = value
+	
+class TestMyFunc(unittest.TestCase):
+    def test_happy_path(self):
+        with mock.patch("requests.get") as mock_get:
+            mock_get.return_value = MockResponse("L1\n L2\n L3")
+            num_lines = myfunc("https://google.com")
+            self.assertEqual(3, num_lines)
+```
 
-	file: test_my_func.py
-		
-		import unittest
-		from unittest import mock
-		from my_func import myfunc
-		
-		class MockResponse:
-		    def __init__(self, value):
-		        self.text = value
-		
-		class TestMyFunc(unittest.TestCase):
-		    def test_happy_path(self):
-		        with mock.patch("requests.get") as mock_get:
-		            mock_get.return_value = MockResponse("L1\n L2\n L3")
-		            num_lines = myfunc("https://google.com")
-		            self.assertEqual(3, num_lines)
-   
+Notice the request to google.com is not actually called, but the API call is mocked out with mock.patch to return the MockResponse instead.
