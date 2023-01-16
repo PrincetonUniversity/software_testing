@@ -1,4 +1,7 @@
-"""Count the lines of code in our project source directory."""
+"""
+    software_testing/08_mocks/examples/count_api_lines.py
+    Count the lines of code in our project source directory.
+"""
 import os
 
 GPFS_DIRECTORY = "/project/src"

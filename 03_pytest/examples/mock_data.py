@@ -1,4 +1,7 @@
-"""Generate test data for unit test"""
+"""
+    software_testing/03_unittest/examples/mock_data.py
+    Generate test data for unit test
+"""
 
 import os
 

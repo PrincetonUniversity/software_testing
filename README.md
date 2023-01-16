@@ -31,7 +31,6 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 
 - Please register using this link: [wintersession] (https://winter.princeton.edu)
 - Fill out a survey for Wintersession with paper forms found in the classroom.
-Expect a survey from Wintersession by email after the 
 - Request an account on [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) if you wish to use Adroit to run examples.
 
 ## Getting Help

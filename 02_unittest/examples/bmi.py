@@ -1,3 +1,5 @@
+"""software_testing/02_unittest/examples/bmi.py"""
+
 def bmi(mass, height):
     if not type(mass) in (int, float):
         raise TypeError("The mass is not an int or float.")
