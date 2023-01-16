@@ -20,3 +20,6 @@ def test_multiple_results():
 def test_no_results():
     people = find_people.find_people("00000")
     assert len(people) == 0
+
+if __name__ == "__main__":
+    pytest.main([__file__])

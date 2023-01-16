@@ -3,25 +3,27 @@ from bmi import bmi
 
 class TestBMI(unittest.TestCase):
 
-    def test_area(self):
-        # test bmi for simple inputs
+    def test_bmi(self):
+        """test bmi for simple inputs"""
         self.assertAlmostEqual(bmi(1, 1), 1)
         self.assertAlmostEqual(bmi(10, 1), 10)
 
     def test_values(self):
-        # raise value error when mass or height is negative
-        self.assertRaises(ValueError, bmi, -2, 1)
-        self.assertRaises(ValueError, bmi, 1, -2)
+        """raise value error when mass or height is negative"""
+        with self.assertRaises(ValueError):
+            bmi(-2, 1)
+        with self.assertRaises(ValueError):
+            bmi(1, -2)
 
     def test_types(self):
-        # handle type errors
+        """handle type errors"""
         self.assertRaises(TypeError, bmi, 3+5j, 1)
         self.assertRaises(TypeError, bmi, True, False)
         self.assertRaises(TypeError, bmi, "cat", "dog")
         self.assertRaises(TypeError, bmi, None, "dog")
 
     def test_zero(self):
-        # division by zero
+        "division by zero"
         self.assertRaises(ZeroDivisionError, bmi, 1, 0)
 
     def test_illegal_type(self):
