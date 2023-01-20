@@ -8,7 +8,7 @@ using the `assert` statement but it is better to use a framework that already ex
 A good starting point for unit testing is the [`unittest`](https://docs.python.org/3/library/unittest.html) module of the Python Standard Library. If you have Python installed then you have this module:
 
 ```bash
-$ module load anaconda3/2021.5
+$ module load anaconda3/2022.5
 $ python
 >>> import unittest
 ```
