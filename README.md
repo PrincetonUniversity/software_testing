@@ -1,10 +1,10 @@
-# Software Testing
+# Gotcha! How to Write Software Tests to Improve Code Quality
 
 ## About
 
 Software testing is the process of verifying and validating that code works as expected. The most granular level is unit testing, where each standalone unit in a code (e.g., function) is exercised to help ensure that it works correctly, even in edge and corner cases. Whether you write unit tests after your code is written or as you go, software tools exist to help make the testing process less manual and more systematic.
 
-This workshop covers some best practices for testing code and gives participants a hands-on introduction to testing frameworks for interpreted (Python) and compiled languages (C/C++). Though the emphasis will be on unit testing, other forms of testing such as system tests, integration tests, and regression tests will be discussed.
+This workshop covers some best practices for testing code and gives participants a hands-on introduction to testing frameworks for interpreted (Python) with suggestions for compiled languages (C/C++). Though the emphasis will be on unit testing, other forms of testing such as system tests, integration tests, and regression tests will be discussed.
 
 ## Setup
 
@@ -14,7 +14,7 @@ Make sure you can run the Python script `test_circle_area.py` on Adroit or anoth
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_unittest
-$ module load anaconda3/2021.5
+$ module load anaconda3/2022.5
 $ python test_circle_area.py
 ```
 <!--
@@ -29,8 +29,8 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 
 ## Reminders
 
-- Please register using this link: [wintersession] (https://winter.princeton.edu)
-- Fill out a survey for Wintersession with paper forms found in the classroom.
+- If you have not already registered then please [register](https://cglink.me/2gi/r1924494)
+- Wintersession will send participants a survey after the workshop.
 - Request an account on [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) if you wish to use Adroit to run examples.
 
 ## Getting Help
@@ -39,4 +39,4 @@ If you encounter any difficulties with the material in this guide then please se
 
 ## Authorship
 
-This guide was created by Jonathan Halverson and members of Research Computing.
+This guide was created by Jonathan Halverson, William Hasling and members of Princeton Research Computing.
