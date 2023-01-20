@@ -16,6 +16,11 @@ $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_unittest
 $ module load anaconda3/2022.5
 $ python test_circle_area.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
 ```
 <!--
 ## Attendance
