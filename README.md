@@ -29,7 +29,7 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 
 ## Reminders
 
-- If you have not already registered then please [register](https://cglink.me/2gi/r1924494)
+- If you have not already registered for the live workshop then please [register](https://cglink.me/2gi/r1924494). 
 - Wintersession will send participants a survey after the workshop.
 - Request an account on [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) if you wish to use Adroit to run examples.
 
