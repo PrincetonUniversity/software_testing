@@ -517,6 +517,6 @@ OK
 
 When writing unit tests it is common to feel like you are creating tests that will obviously work. It is hard to know which scenarios to test. It is impossible to write tests to handle ALL scenarios. When writing tests think about your audience. Write tests to help the next person who might have to use or change your code. This might be your future self 2 weeks from now.
 
-It may be helpful to start with just one test case per file. It is not hard to write one test. As you debug if you find a problem then add a new test case to replicate that bug before you fix it. It is easy to add one more test if the test file already exists.
+It may be helpful to start with just one test case per file. It is not hard to write one test. As you debug, if you find a problem then add a new test case to replicate that bug before you fix it. It is easy to add one more test if the test file already exists.
 
 Over time you will find your tests will grow to be quite comprehensive and useful.
