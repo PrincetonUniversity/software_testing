@@ -174,4 +174,4 @@ $ conda install pytest
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu
 $ module load anaconda3/2022.5
-$ pytest --vesion
+$ pytest --version
