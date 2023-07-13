@@ -42,6 +42,9 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 
 If you encounter any difficulties with the material in this guide then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
 
+## Resources
+[Software Testing Tutorial from Intersect](https://intersect-training.org/testing-lesson/index.html)
+
 ## Authorship
 
 This guide was created by Jonathan Halverson, William Hasling and members of Princeton Research Computing.
