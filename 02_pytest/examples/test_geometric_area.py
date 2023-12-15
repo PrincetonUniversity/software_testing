@@ -22,6 +22,3 @@ def test_types():
         circle_area(True)
     with pytest.raises(TypeError):
         circle_area("cat")
-
-if __name__ == "__main__":
-    pytest.main([__file__])

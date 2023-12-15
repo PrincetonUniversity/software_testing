@@ -29,5 +29,3 @@ def test_bmi(bmi_1, bmi_2, bmi_3):
     assert(bmi_2.compute_bmi() == 1)
     assert(round(bmi_3.compute_bmi(), 2) == 24.39)
 
-if __name__ == "__main__":
-    pytest.main([__file__])

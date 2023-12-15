@@ -11,6 +11,11 @@ class TestBMI(unittest.TestCase):
 
     def test_values(self):
         """raise value error when mass or height is negative"""
+        try:
+            bmi(-2, 1)
+            self.fail("Expected error")
+        except:
+            pass
         with self.assertRaises(ValueError):
             bmi(-2, 1)
         with self.assertRaises(ValueError):
