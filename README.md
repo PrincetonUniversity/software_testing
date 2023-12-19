@@ -8,14 +8,14 @@ This workshop covers some best practices for testing code and gives participants
 
 ## Setup
 
-Make sure you can run the Python script `test_circle_area.py` on Adroit or another machine:
+Make sure you can run the Python script `test_func.py` on Adroit or another machine:
 
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
+$ source /scratch/environments/shared_env/bin/activate
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
-$ cd software_testing/02_unittest
-$ module load anaconda3/2022.5
-$ python test_circle_area.py
+$ cd software_testing/02_pytest
+$ python test_func.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -34,7 +34,7 @@ Toward the end of the workshop please complete [this survey](http://bit.ly/PUBoo
 
 ## Reminders
 
-- If you have not already registered for the live workshop then please [register](https://cglink.me/2gi/r1924494). 
+- If you have not already registered for the live workshop then please [register](https://winter.princeton.edu/register). 
 - Wintersession will send participants a survey after the workshop.
 - Request an account on [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) if you wish to use Adroit to run examples.
 
