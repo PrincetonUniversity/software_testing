@@ -1,8 +1,10 @@
 """software_testing/02_pytest/examples/bmi_health.py"""
+
+
 class BMI:
     """Class to compute body mass index."""
 
-    def __init__(self, mass:float, height:float)->float:
+    def __init__(self, mass: float, height: float) -> float:
         """Constructor."""
         self.mass = mass
         self.height = height
@@ -20,9 +22,11 @@ class BMI:
         """Returns True if the person is overweight."""
         return self.compute_bmi() > 25
 
+
 def to_kg(pounds):
     """Convert pounds to kilograms."""
     return pounds * 0.453592
+
 
 def to_meters(feet, inches):
     """Convert feet/inches to meters."""

@@ -5,6 +5,7 @@
 
 import os
 
+
 def generate_test_data():
     """Generate demographics.csv test data file into temp directory for unit test."""
 
@@ -19,6 +20,7 @@ def generate_test_data():
         fp.write("bob,jones,12 ceder lan,10019,987-65-1234\n")
     return directory
 
+
 def delete_temp_directory(directory):
     """Delete test data and temp directory to clean up after unit test"""
 
@@ -26,10 +28,12 @@ def delete_temp_directory(directory):
     remove_directory(f"{directory}/private_info")
     remove_directory(f"{directory}")
 
+
 def remove_file(file_path):
     """Remove a file if exists"""
     if os.path.exists(file_path):
         os.remove(file_path)
+
 
 def remove_directory(dir_path):
     """Remove a directory if exists"""

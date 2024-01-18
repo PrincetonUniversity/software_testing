@@ -1,6 +1,6 @@
 """software_testing/03_unittest/examples/test_geometric_area.py"""
-import pytest
 import math
+import pytest
 from geometric_area import circle_area
 
 def test_area():

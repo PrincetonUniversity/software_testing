@@ -27,7 +27,9 @@ def test_id_not_found(mocker):
     flask.request = MockRequest({"id": "illegal"})
     flask_app.get_questions()
 
+
 class MockRequest:
     """Mock object to simulate a flask request."""
+
     def __init__(self, query_parameters):
         self.args = query_parameters
