@@ -1,5 +1,5 @@
 """
-    software_testing/03_unittest/examples/mock_data.py
+    software_testing/02_pytest/examples/mock_data.py
     Generate test data for unit test
 """
 
