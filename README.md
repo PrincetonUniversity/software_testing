@@ -8,7 +8,7 @@ This workshop covers some best practices for testing code and gives participants
 
 ## Setup
 
-Choose one of the methods below to use the needed software for this workshop:
+Choose one of the methods below to setup the needed software for this workshop:
 
 #### Adroit
 
