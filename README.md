@@ -8,20 +8,36 @@ This workshop covers some best practices for testing code and gives participants
 
 ## Setup
 
-Make sure you can run the Python script `test_func.py` on Adroit or another machine:
+#### Adroit
+
+Make sure you can run the Python script `test_func.py` on Adroit:
 
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
 $ source /scratch/environments/shared_venv/bin/activate
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
-$ python -m unittest test_func.py
-
-----------------------------------------------------------------------
-Ran 0 tests in 0.000s
-
-OK
+$ python test_func.py
+Success!
 ```
+
+#### Your Laptop
+
+You will need to install the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. It would be best to install these into an isolated software environment. Here is one way to install the packages:
+
+```
+$ pip install pytest pytest-mock flask requests
+```
+
+Then test your software environment:
+
+```
+$ git clone https://github.com/PrincetonUniversity/software_testing.git
+$ cd software_testing/02_pytest
+$ python test_func.py
+Success!
+```
+
 <!--
 ## Attendance
 
