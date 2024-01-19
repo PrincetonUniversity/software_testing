@@ -23,7 +23,7 @@ Success!
 
 #### Your Laptop
 
-You will need to install the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. It would be best to install these into an isolated software environment. Here is one way to install the packages:
+You will need to install the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. It would be best to install these into an isolated software environment (see the `conda create` line for Nobel below). Here is one way to install the packages:
 
 ```
 $ pip install pytest pytest-mock flask requests
@@ -32,6 +32,38 @@ $ pip install pytest pytest-mock flask requests
 Then test your software environment:
 
 ```
+$ git clone https://github.com/PrincetonUniversity/software_testing.git
+$ cd software_testing/02_pytest
+$ python test_func.py
+Success!
+```
+
+#### Nobel (Mac/Linux laptop)
+
+All members of Princeton with a NetID have access to [Nobel](https://researchcomputing.princeton.edu/systems/nobel).
+
+```bash
+$ ssh <YourNetID>@nobel.princeton.edu
+# answer yes if prompted
+$ module load anaconda3/2023.9
+$ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
+$ conda activate testing-env
+$ git clone https://github.com/PrincetonUniversity/software_testing.git
+$ cd software_testing/02_pytest
+$ python test_func.py
+Success!
+```
+
+#### Nobel (Windows laptop)
+
+All members of Princeton with a NetID have access to [Nobel](https://researchcomputing.princeton.edu/systems/nobel).
+
+```bash
+$ ssh -m hmac-sha2-512 <YourNetID>@nobel.princeton.edu
+# answer yes if prompted
+$ module load anaconda3/2023.9
+$ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
+$ conda activate testing-env
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
 $ python test_func.py
