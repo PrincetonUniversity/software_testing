@@ -16,6 +16,7 @@ If you already have an account on [Adroit](https://researchcomputing.princeton.e
 
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
+# answer yes if prompted
 $ source /scratch/environments/shared_venv/bin/activate
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
@@ -26,7 +27,7 @@ Success!
 If you are using a Windows machine and you encounter `Corrupted MAC on input` then use:
 
 ```
-$ ssh -m hmac-sha2-512 <YourNetID>@dadroit.princeton.edu
+$ ssh -m hmac-sha2-512 <YourNetID>@adroit.princeton.edu
 ```
 
 #### Your Laptop
