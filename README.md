@@ -20,7 +20,7 @@ $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
 $ source /scratch/environments/shared_venv/bin/activate
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
-$ python test_func.py
+$ python status.py
 Success!
 ```
 
@@ -43,7 +43,7 @@ Then test your software environment:
 ```
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
-$ python test_func.py
+$ python status.py
 Success!
 ```
 
@@ -59,7 +59,7 @@ $ conda create --name testing-env pytest pytest-mock flask requests -c conda-for
 $ conda activate testing-env
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
-$ python test_func.py
+$ python status.py
 Success!
 ```
 
