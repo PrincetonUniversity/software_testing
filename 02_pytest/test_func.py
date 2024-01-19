@@ -1,5 +1,7 @@
 from func import func
 import pytest
+import flask
+import requests
 
 def test_answer():
     assert func(3) == 4
