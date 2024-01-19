@@ -16,15 +16,15 @@ $ source /scratch/environments/shared_venv/bin/activate
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
 $ pytest test_func.py
-================================ test session starts ================================
+============================ test session starts ============================
 platform linux -- Python 3.11.5, pytest-7.4.3, pluggy-1.3.0
 rootdir: /home/jdh4/software_testing/02_pytest
 plugins: mock-3.12.0
 collected 1 item
 
-test_func.py .                                                                [100%]
+test_func.py .                                                         [100%]
 
-================================= 1 passed in 0.01s =================================
+============================= 1 passed in 0.01s =============================
 ```
 <!--
 ## Attendance
