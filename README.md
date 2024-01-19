@@ -8,9 +8,11 @@ This workshop covers some best practices for testing code and gives participants
 
 ## Setup
 
+Choose one of the methods below to use the needed software for this workshop:
+
 #### Adroit
 
-Make sure you can run the Python script `test_func.py` on Adroit:
+If you already have an account on [Adroit](https://researchcomputing.princeton.edu/systems/adroit):
 
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu  # VPN required if off-campus
@@ -19,6 +21,12 @@ $ git clone https://github.com/PrincetonUniversity/software_testing.git
 $ cd software_testing/02_pytest
 $ python test_func.py
 Success!
+```
+
+If you are using a Windows machine and you encounter `Corrupted MAC on input` then use:
+
+```
+$ ssh -m hmac-sha2-512 <YourNetID>@dadroit.princeton.edu
 ```
 
 #### Your Laptop
