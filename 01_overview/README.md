@@ -50,8 +50,6 @@ If you can't write tests for your code then the structure and design choices of 
 
 If you have a battery of tests for a certain piece of code then when a bug arises (or is suspected) you can run the test suite to rule out potential problems. Running the test suite is usually the first thing to do when a bug is found.
 
-See Wintersession [debugging workshop](https://my.princeton.edu/OWCE/rsvp?id=1340958) on January 14, 2022.
-
 
 ## Terminology
 
