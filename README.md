@@ -52,7 +52,7 @@ Success!
 All members of Princeton with a NetID have access to [Nobel](https://researchcomputing.princeton.edu/systems/nobel).
 
 ```bash
-$ ssh <YourNetID>@nobel.princeton.edu
+$ ssh <YourNetID>@nobel.princeton.edu  # VPN required if off-campus
 # answer yes if prompted
 $ module load anaconda3/2023.9
 $ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
