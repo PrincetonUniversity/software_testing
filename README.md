@@ -43,9 +43,9 @@ $ pip3 install pytest pytest-mock flask requests
 Then test your software environment:
 
 ```
-$ git clone https://github.com/PrincetonUniversity/software_testing.git
-$ cd software_testing/02_pytest
-$ python status.py
+(test-env) $ git clone https://github.com/PrincetonUniversity/software_testing.git
+(test-env) $ cd software_testing/02_pytest
+(test-env) $ python status.py
 Success!
 ```
 
