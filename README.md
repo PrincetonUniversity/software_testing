@@ -32,21 +32,27 @@ $ ssh -m hmac-sha2-512 <YourNetID>@adroit.princeton.edu
 
 #### Your Laptop
 
-You will need to install the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. It would be best to install these into an isolated software environment (see the `conda create` line for Nobel below). Here is one way to install the packages:
+You will need [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. Here is one way to install the Python packages:
 
 ```
-$ python3 -m venv test-env
-$ source test-env/bin/activate
+$ python3 -m venv testing-env
+$ source testing-env/bin/activate
 $ pip3 install pytest pytest-mock flask requests
 ```
 
 Then test your software environment:
 
 ```
-(test-env) $ git clone https://github.com/PrincetonUniversity/software_testing.git
-(test-env) $ cd software_testing/02_pytest
-(test-env) $ python status.py
+(testing-env) $ git clone https://github.com/PrincetonUniversity/software_testing.git
+(testing-env) $ cd software_testing/02_pytest
+(testing-env) $ python status.py
 Success!
+```
+
+If you have [Anaconda Python](https://www.anaconda.com/download) installed then you could create a `conda` environment as follows:
+
+```
+(base) $ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
 ```
 
 #### Nobel
