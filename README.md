@@ -35,7 +35,9 @@ $ ssh -m hmac-sha2-512 <YourNetID>@adroit.princeton.edu
 You will need to install the Python packages `pytest`, `pytest-mock`, `flask` and `requests`. It would be best to install these into an isolated software environment (see the `conda create` line for Nobel below). Here is one way to install the packages:
 
 ```
-$ pip install pytest pytest-mock flask requests
+$ python3 -m venv test-env
+$ source test-env/bin/activate
+$ pip3 install pytest pytest-mock flask requests
 ```
 
 Then test your software environment:
@@ -54,7 +56,7 @@ All members of Princeton with a NetID have access to [Nobel](https://researchcom
 ```bash
 $ ssh <YourNetID>@nobel.princeton.edu  # VPN required if off-campus
 # answer yes if prompted
-$ module load anaconda3/2023.9
+$ module load anaconda3/2024.6
 $ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
 $ conda activate testing-env
 $ git clone https://github.com/PrincetonUniversity/software_testing.git
