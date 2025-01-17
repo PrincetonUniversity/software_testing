@@ -49,11 +49,7 @@ Then test your software environment:
 Success!
 ```
 
-If you have [Anaconda Python](https://www.anaconda.com/download) installed then you could create a `conda` environment as follows:
-
-```
-(base) $ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
-```
+If instead of the above directions you would like to use [Anaconda Python](https://www.anaconda.com/download) then see the `conda create` line below for Nobel.
 
 #### Nobel
 
