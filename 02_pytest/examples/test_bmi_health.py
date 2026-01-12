@@ -1,4 +1,7 @@
-"""software_testing/03_unittest/examples/test_bmi_health.py"""
+"""
+software_testing/03_unittest/examples/test_bmi_health.py
+Use pytest fixtures to constuct an environment of various object scenarios.
+"""
 import pytest
 from bmi_health import BMI, to_kg, to_meters
 
@@ -29,7 +32,7 @@ def test_mass_height(bmi_1, bmi_2):
     assert bmi_2.name == "Charlie"
 
 
-def test_bmi(bmi_1, bmi_2, bmi_3):
+def test_bmi_value(bmi_1, bmi_2, bmi_3):
     assert bmi_1.compute_bmi() == 10
     assert bmi_2.compute_bmi() == 1
     assert round(bmi_3.compute_bmi(), 2) == 24.39
