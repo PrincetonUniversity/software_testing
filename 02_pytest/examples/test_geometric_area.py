@@ -10,6 +10,7 @@ def test_area():
     assert circle_area(2.1) == math.pi * 2.1**2
     assert circle_area(2.1) == pytest.approx(13.854423)
     assert circle_area(2.1) == pytest.approx(13.854, abs=0.001)
+    assert pytest.approx(circle_area(2.1), abs=0.001) == 13.854
 
 def test_values():
     """raise value error when radius is negative"""
