@@ -73,7 +73,7 @@ A test fixture is defined by a function with a @pytest.fixture() annotation. A s
 import pytest
 from func import func
 
-@pytest.fixture(autuse=True)
+@pytest.fixture(autouse=True)
 def setUp():
 	print()
 	print("setUp")
