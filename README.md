@@ -49,28 +49,10 @@ Then test your software environment:
 Success!
 ```
 
-If instead of the above directions you would like to use [Anaconda Python](https://www.anaconda.com/download) then see the `conda create` line below for Nobel.
-
-#### Nobel
-
-All members of Princeton with a NetID have access to [Nobel](https://researchcomputing.princeton.edu/systems/nobel).
+If instead of the above directions you would like to use [Anaconda Python](https://www.anaconda.com/download) then see the `conda create` line below:
 
 ```bash
-$ ssh <YourNetID>@nobel.princeton.edu  # VPN required if off-campus
-# answer yes if prompted
-$ module load anaconda3/2024.6
 $ conda create --name testing-env pytest pytest-mock flask requests -c conda-forge -y
-$ conda activate testing-env
-$ git clone https://github.com/PrincetonUniversity/software_testing.git
-$ cd software_testing/02_pytest
-$ python status.py
-Success!
-```
-
-If you are using a **Windows** machine and you encounter `Corrupted MAC on input` then use:
-
-```
-$ ssh -m hmac-sha2-512 <YourNetID>@nobel.princeton.edu
 ```
 
 <!--
